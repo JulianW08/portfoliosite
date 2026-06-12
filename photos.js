@@ -19,12 +19,12 @@ const PHOTOS = [
     cat: 'studio',
   },
   {
-    file: 'photos/LeopardForSite1.jpg',
+    file: 'photos/LeopardForSite1.JPG',
     title: 'Leopard in Namibia; low angle',
     cat: 'wildlife',
   },
   {
-    file: 'photos/muscovyduck.png',
+    file: 'photos/muscovyduck.PNG',
     title: 'Muscovy Duck in Porto, Portugal; straight on',
     cat: 'wildlife',
   },
