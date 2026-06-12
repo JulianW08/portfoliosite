@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Julian Walker — Photography portfolio and engineering projects. Incoming CE @ UIUC."
+    />
+    <meta property="og:title" content="jwalk — Julian Walker" />
+    <meta
+      property="og:description"
+      content="Photographer. Engineer-in-training. Perpetual jaywalker."
+    />
+    <title>jwalk — Julian Walker</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FF5C28'/><text x='22' y='82' font-size='72' font-family='Arial' font-weight='900' fill='white'>j</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,700;1,700&family=Cormorant+Garamond:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="loading">
+    <!-- =====================
+       LOADER
+       ===================== -->
+    <div id="loader">
+      <div class="loader-brand">
+        <span class="lb-j">j</span><span class="lb-rest">walk</span>
+      </div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Scroll progress bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- =====================
+       NAVIGATION
+       ===================== -->
+    <nav id="nav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" id="navLogo">jwalk</a>
+        <div class="nav-links">
+          <a href="#about">about</a>
+          <a href="#photography">photos</a>
+          <a href="#projects">projects</a>
+          <a href="#contact">contact</a>
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" class="mn-link">about</a>
+      <a href="#photography" class="mn-link">photos</a>
+      <a href="#projects" class="mn-link">projects</a>
+      <a href="#contact" class="mn-link">contact</a>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="c-dot" id="cDot"></div>
+    <div class="c-ring" id="cRing"></div>
+
+    <!-- =====================
+       HERO
+       ===================== -->
+    <section id="hero" class="s-hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow"></div>
+      <div class="glass-orb glass-orb-1"></div>
+      <div class="glass-orb glass-orb-2"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-name">
+          <span class="hero-j">j</span><span class="hero-walk">walk</span>
+        </h1>
+        <div class="hero-typed">
+          <span id="typedText"></span><span class="type-cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          Photographer. Engineer-in-training. University of Illinois class of
+          '30.<br />
+          I like seeing world differently — specifically through my lens.
+        </p>
+        <div class="hero-btns">
+          <a href="#photography" class="btn-primary">view work</a>
+          <a
+            href="#about"
+            class="btn-ghost btn-ghost-flip"
+            data-default="who is julian?"
+            data-hover="julian is..."
+            >who is julian?</a
+          >
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-bar"></div>
+        <span>scroll</span>
+      </div>
+
+      <span class="hero-loc">Urbana-Champaign, IL</span>
+    </section>
+
+    <!-- =====================
+       ABOUT
+       ===================== -->
+    <section id="about" class="s-about">
+      <div class="container">
+        <div class="sec-label reveal">
+          <span class="sec-num">01</span>
+          <span class="sec-name">about</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-left">
+            <h2 class="sec-title reveal">
+              Everything at once.<br /><em>One frame</em><br />at a time.
+            </h2>
+            <div class="about-body">
+              <p class="reveal reveal-d1">
+                Hey — I'm Julian, an 18 y/o
+                <span
+                  style="
+                    background: linear-gradient(
+                      90deg,
+                      #4a8a5e,
+                      #a89e96,
+                      #9e4a4a
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-weight: 600;
+                  "
+                  >Italian</span
+                >
+                and
+                <span
+                  style="
+                    background: linear-gradient(
+                      90deg,
+                      #3a6e4a,
+                      #8c8c84,
+                      #3a6e4a
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-weight: 600;
+                  "
+                  >Nigerian</span
+                >
+                incoming Computer Engineering student at UIUC, and I've been
+                <strong>pointing cameras at interesting things</strong> since
+                sophomore year of high school.
+              </p>
+              <p class="reveal reveal-d2">
+                My mind tends to <u>run in multiple directions at once</u>.
+                Turns out that's useful when you're composing a shot — you
+                notice <strong>everything</strong>. The texture of a wall. The
+                way light bends around a corner. The stranger crossing the
+                street.
+              </p>
+              <p class="reveal reveal-d3">
+                This site is where
+                <strong>photography meets engineering</strong>. Right now it's a
+                portfolio. Eventually it'll be a <u>playground</u>.
+              </p>
+            </div>
+            <div class="tag-row reveal reveal-d4">
+              <span class="tag">Photography</span>
+              <span class="tag">Computer Engineering</span>
+              <span class="tag">UIUC '30</span>
+              <span class="tag">ADHD</span>
+              <span class="tag">Creative</span>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <div class="code-terminal reveal reveal-d1">
+              <div class="ct-bar">
+                <span class="ct-dot ct-red"></span>
+                <span class="ct-dot ct-yellow"></span>
+                <span class="ct-dot ct-green"></span>
+                <span class="ct-file">jwalk.js</span>
+              </div>
+              <pre
+                class="ct-code"
+              ><span class="kw">const</span> <span class="fn">jwalk</span> = {
+  name:     <span class="str">"Julian Walker"</span>,
+  alias:    <span class="str">"jwalk"</span>,
+  role:     [<span class="str">"Photographer"</span>, <span class="str">"CE Student"</span>, <span class="str">"Procrastinatorr"</span>],
+  school:   <span class="str">"UIUC CE '30"</span>,
+  skills:   [<span class="str">"C"</span>, <span class="str">"Python"</span>,
+             <span class="str">"JS"</span>, <span class="str">"HTML/CSS"</span>],
+  brain:    <span class="str">"100mph or null"</span>,
+  ADHD:     <span class="kw">True</span>,
+  open_to:  [<span class="str">"collabs"</span>,
+             <span class="str">"internships"</span>],
+  gear:     [<span class="str">"Sony A7iv"</span>,
+             <span class="str">"Tamron 35-150 f2-2.8"</span>],              
+}</pre>
+            </div>
+            <div class="about-bottom-row reveal reveal-d2">
+              <!-- Portrait — swap src for your own photo, e.g. photos/me.jpg -->
+              <div class="about-portrait-wrap">
+                <img
+                  class="about-portrait"
+                  src="photos/Julian2.jpeg"
+                  alt="Julian Walker"
+                  onerror="this.parentElement.classList.add('no-photo')"
+                />
+              </div>
+              <div class="stats-row">
+                <div class="stat">
+                  <span class="stat-n">∞</span>
+                  <span class="stat-l">thoughts/sec</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-n">1</span>
+                  <span class="stat-l">shutter click</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-n">🤷</span>
+                  <span class="stat-l">bad angles</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+       PHOTOGRAPHY
+       ===================== -->
+    <section id="photography" class="s-photo">
+      <div class="container">
+        <div class="sec-label reveal">
+          <span class="sec-num">02</span>
+          <span class="sec-name">photography</span>
+        </div>
+
+        <div class="photo-head">
+          <h2 class="sec-title reveal">Through the<br /><em>lens.</em></h2>
+          <div class="filters reveal reveal-d1">
+            <button class="f-btn active" data-filter="all">all</button>
+            <button class="f-btn" data-filter="urban">urban</button>
+            <button class="f-btn" data-filter="portrait">portrait</button>
+            <button class="f-btn" data-filter="nature">nature</button>
+            <button class="f-btn" data-filter="abstract">abstract</button>
+          </div>
+        </div>
+
+        <div class="photo-grid" id="photoGrid"></div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+        <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+        <div class="lb-inner">
+          <div class="lb-img" id="lbImg"></div>
+          <p class="lb-info" id="lbInfo"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+       PROJECTS
+       ===================== -->
+    <section id="projects" class="s-projects">
+      <div class="container">
+        <div class="sec-label reveal">
+          <span class="sec-num">03</span>
+          <span class="sec-name">projects</span>
+        </div>
+        <h2 class="sec-title reveal">What I'm<br /><em>building.</em></h2>
+        <p class="sec-sub reveal">
+          Engineering projects, side-projects, and ideas that kept me up at 2am.
+        </p>
+
+        <div class="proj-grid">
+          <!-- Featured -->
+          <article class="proj-card featured reveal">
+            <div class="proj-top">
+              <span class="status live">
+                <span class="status-dot"></span>live
+              </span>
+              <span class="proj-num">001</span>
+            </div>
+            <h3>SolaceADHD</h3>
+            <p>
+              An ADHD resource platform with 180+ posts and 10k+ views. Users
+              can upload and discover resources — articles, tools, strategies —
+              all community-driven. Built solo from scratch.
+            </p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span
+              ><span>Firebase</span>
+            </div>
+            <div class="proj-links">
+              <a
+                href="https://solaceadhd.org"
+                target="_blank"
+                rel="noopener"
+                class="plink"
+                >solaceadhd.org ↗</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 2 placeholder for future -->
+          <article class="proj-card reveal reveal-d1">
+            <div class="proj-top">
+              <span class="status wip">
+                <span class="status-dot"></span>in progress
+              </span>
+              <span class="proj-num">002</span>
+            </div>
+            <h3>This Portfolio</h3>
+            <p>
+              Hand-coded from scratch — no frameworks, no templates. The italic
+              orange <em>j</em> was worth it.
+            </p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="proj-links">
+              <a href="#hero" class="plink">you're looking at it</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="proj-card reveal reveal-d2">
+            <div class="proj-top">
+              <span class="status planned">
+                <span class="status-dot"></span>coming soon
+              </span>
+              <span class="proj-num">003</span>
+            </div>
+            <h3>More at UIUC</h3>
+            <p>
+              Embedded systems, circuits, and whatever keeps me up at 2am
+              freshman year. Watch this space.
+            </p>
+            <div class="tech-tags">
+              <span>C</span><span>Assembly</span><span>Hardware</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="plink">fall '26 →</a>
+            </div>
+          </article>
+
+          <!-- invisible spacer to keep grid balanced -->
+          <article class="proj-card reveal reveal-d3">
+            <div class="proj-top">
+              <span class="status planned">
+                <span class="status-dot"></span>planned
+              </span>
+              <span class="proj-num">004</span>
+            </div>
+            <h3>ADHD Focus Timer</h3>
+            <p>
+              A Pomodoro-style timer built for ADHD brains. Visual, gamified,
+              forgiving — because 25 minutes is sometimes 4, and that's okay.
+            </p>
+            <div class="tech-tags">
+              <span>React Native</span><span>Expo</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="plink">ideation phase</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+       CONTACT
+       ===================== -->
+    <section id="contact" class="s-contact">
+      <div class="container">
+        <div class="sec-label reveal">
+          <span class="sec-num">04</span>
+          <span class="sec-name">contact</span>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-left reveal">
+            <h2 class="sec-title">Let's<br /><em>talk.</em></h2>
+            <p>
+              Whether you want to collaborate, commission a print, hire me, or
+              just say what's up — I'm here.
+            </p>
+            <nav class="socials" aria-label="Social links">
+              <div class="social-row insta-group">
+                <div class="insta-top">
+                  <span class="soc-arrow">→</span>Instagram
+                </div>
+                <div class="insta-fork">
+                  <a
+                    href="https://www.instagram.com/jmwalker88?igsh=MXV1ZDBiYmttdGExdQ%3D%3D&utm_source=qr"
+                    target="_blank"
+                    rel="noopener"
+                    class="fork-link"
+                  >
+                    <span class="fork-chr">↳</span> personal
+                  </a>
+                  <a
+                    href="https://www.instagram.com/the.mica.light?igsh=MTJzcjNodjNuZjdtaQ%3D%3D&utm_source=qr"
+                    target="_blank"
+                    rel="noopener"
+                    class="fork-link"
+                  >
+                    <span class="fork-chr">↳</span> photography
+                  </a>
+                </div>
+              </div>
+              <a href="mailto:walkerjulian888@gmail.com" class="social-row">
+                <span class="soc-arrow">→</span>Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/julian-walker88"
+                target="_blank"
+                rel="noopener"
+                class="social-row"
+              >
+                <span class="soc-arrow">→</span>LinkedIn
+              </a>
+            </nav>
+          </div>
+
+          <div class="contact-right reveal reveal-d2">
+            <form id="contactForm" novalidate>
+              <div class="fg">
+                <label for="fname">name</label>
+                <input
+                  id="fname"
+                  name="name"
+                  type="text"
+                  placeholder="your name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="fg">
+                <label for="femail">email</label>
+                <input
+                  id="femail"
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+              <div class="fg">
+                <label for="fmsg">what's up?</label>
+                <textarea
+                  id="fmsg"
+                  name="message"
+                  placeholder="Say anything. I read everything."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary" id="formSubmit">
+                send it ↗
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="contact-bg-word" aria-hidden="true">jwalk</div>
+    </section>
+
+    <!-- =====================
+       FOOTER
+       ===================== -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="fl">
+          <span class="footer-logo">jwalk</span>
+          <span class="footer-tag">jaywalking through life since 2008</span>
+        </div>
+        <div class="fr">
+          <span>designed & built by julian walker</span>
+          <span>© 2026</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="photos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
