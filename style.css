@@ -231,9 +231,9 @@ button { font-family: var(--font); }
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
-.burger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .burger.open span:nth-child(2) { opacity: 0; }
-.burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Mobile nav */
 .mobile-nav {
@@ -1144,27 +1144,47 @@ button { font-family: var(--font); }
   .nav-links { display: none; }
   .burger    { display: flex; }
 
-  .about-grid    { grid-template-columns: 1fr; gap: 52px; }
+  .about-grid    { grid-template-columns: 1fr; gap: 48px; }
   .about-right   { order: -1; }
-  .card-stack    { height: 260px; }
-  .info-card     { width: 180px; }
-  .c2            { left: 90px; }
 
-  .photo-grid    { /* masonry JS handles columns */ }
+  .about-bottom-row { flex-direction: row; align-items: flex-end; gap: 16px; }
+  .about-portrait { width: 150px; height: 196px; }
+
   .photo-head    { flex-direction: column; align-items: flex-start; }
 
   .proj-grid     { grid-template-columns: 1fr; }
   .proj-card.featured { grid-column: 1; }
 
-  .contact-grid  { grid-template-columns: 1fr; gap: 52px; }
+  .contact-grid  { grid-template-columns: 1fr; gap: 48px; }
 
   .hero-loc      { display: none; }
 }
 
 @media (max-width: 520px) {
-  .photo-grid { /* masonry JS handles columns */ }
-  .container  { padding: 0 20px; }
-  .s-about, .s-photo, .s-projects, .s-contact { padding: 88px 0; }
-  .footer { padding: 24px 20px; }
-  .ct-code { font-size: 11px; padding: 16px 14px; }
+  .container  { padding: 0 18px; }
+  .s-about, .s-photo, .s-projects, .s-contact { padding: 72px 0; }
+
+  /* Hero */
+  .hero-desc { font-size: 14px; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-ghost { width: 100%; max-width: 280px; justify-content: center; }
+
+  /* About */
+  .sec-title { font-size: clamp(28px, 9vw, 42px); }
+  .about-body p { font-size: 14px; }
+  .about-bottom-row { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .about-portrait { width: 140px; height: 182px; }
+  .ct-code { font-size: 10px; padding: 14px 12px; line-height: 1.65; white-space: pre-wrap; word-break: break-word; }
+  .code-terminal { overflow-x: hidden; }
+
+  /* Projects */
+  .proj-card { padding: 24px; }
+
+  /* Contact */
+  .contact-grid { gap: 36px; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; gap: 12px; }
+  .fr { text-align: left; }
 }

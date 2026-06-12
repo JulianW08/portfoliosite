@@ -163,7 +163,7 @@ const PHOTOS = [
     cat: 'urban',
   },
   {
-    file: 'photos/duomo.jpg',
+    file: 'photos/duomo.JPG',
     title:
       'Basilica in Ravenna, Italy (my mothers hometown) captured with a Nikon',
     cat: 'urban',
