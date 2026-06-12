@@ -243,7 +243,15 @@ function runMasonry() {
 
 window.addEventListener('resize', runMasonry, { passive: true });
 
+let activeScrollHandler = null;
+
 function buildGrid(filter) {
+  // Cancel any scroll handler from a previous grid
+  if (activeScrollHandler) {
+    window.removeEventListener('scroll', activeScrollHandler);
+    activeScrollHandler = null;
+  }
+
   grid.innerHTML = '';
   grid.style.height = '0';
 
@@ -259,14 +267,16 @@ function buildGrid(filter) {
     if (shown >= items.length) return;
 
     scrollHandler = () => {
-      if (grid.offsetHeight < 100) return; // grid not rendered yet
+      if (grid.offsetHeight < 100) return;
       const distFromBottom = grid.getBoundingClientRect().bottom - window.innerHeight;
       if (distFromBottom < 400) {
         window.removeEventListener('scroll', scrollHandler);
+        activeScrollHandler = null;
         scrollHandler = null;
         renderBatch();
       }
     };
+    activeScrollHandler = scrollHandler;
     window.addEventListener('scroll', scrollHandler, { passive: true });
   }
 
