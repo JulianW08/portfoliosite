@@ -24,28 +24,21 @@ function exitLoader() {
 const cDot = document.getElementById('cDot');
 const cRing = document.getElementById('cRing');
 
-let mx = 0,
-  my = 0;
-let rx = 0,
-  ry = 0;
+let mx = 0, my = 0;
+let rx = 0, ry = 0;
 
-document.addEventListener(
-  'mousemove',
-  (e) => {
-    mx = e.clientX;
-    my = e.clientY;
-    cDot.style.left = mx + 'px';
-    cDot.style.top = my + 'px';
-  },
-  { passive: true }
-);
+document.addEventListener('mousemove', (e) => {
+  mx = e.clientX;
+  my = e.clientY;
+}, { passive: true });
 
-(function ringLoop() {
+(function cursorLoop() {
+  // offset by half element size to center; no layout reflow vs top/left
+  cDot.style.transform = `translate3d(${mx - 3}px,${my - 3}px,0)`;
   rx += (mx - rx) * 0.13;
   ry += (my - ry) * 0.13;
-  cRing.style.left = rx + 'px';
-  cRing.style.top = ry + 'px';
-  requestAnimationFrame(ringLoop);
+  cRing.style.transform = `translate3d(${rx - 16}px,${ry - 16}px,0)`;
+  requestAnimationFrame(cursorLoop);
 })();
 
 const hovTargets =
@@ -56,38 +49,28 @@ document.querySelectorAll(hovTargets).forEach((el) => {
 });
 
 /* ============================================
-   SCROLL PROGRESS
+   SCROLL PROGRESS + NAVIGATION (single rAF-throttled handler)
    ============================================ */
 const scrollBar = document.getElementById('scrollProgress');
-
-window.addEventListener(
-  'scroll',
-  () => {
-    const pct =
-      (window.scrollY /
-        (document.documentElement.scrollHeight - window.innerHeight)) *
-      100;
-    scrollBar.style.width = pct + '%';
-  },
-  { passive: true }
-);
-
-/* ============================================
-   NAVIGATION
-   ============================================ */
 const nav = document.getElementById('nav');
 const navLogo = document.getElementById('navLogo');
 const burger = document.getElementById('burgerBtn');
 const mobileNav = document.getElementById('mobileNav');
 
-window.addEventListener(
-  'scroll',
-  () => {
-    nav.classList.toggle('solid', window.scrollY > 40);
-    highlightNav();
-  },
-  { passive: true }
-);
+let scrollTicking = false;
+window.addEventListener('scroll', () => {
+  if (!scrollTicking) {
+    requestAnimationFrame(() => {
+      const sy = window.scrollY;
+      const pct = (sy / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      scrollBar.style.width = pct + '%';
+      nav.classList.toggle('solid', sy > 40);
+      highlightNav();
+      scrollTicking = false;
+    });
+    scrollTicking = true;
+  }
+}, { passive: true });
 
 burger.addEventListener('click', () => {
   const isOpen = mobileNav.classList.toggle('open');
@@ -222,26 +205,34 @@ function masonryCols() {
   return 3;
 }
 
+let masonryRafId = null;
 function runMasonry() {
-  const cols = masonryCols();
-  const gridW = grid.offsetWidth;
-  const colW = (gridW - MASONRY_GAP * (cols - 1)) / cols;
-  const heights = new Array(cols).fill(0);
+  if (masonryRafId) return;
+  masonryRafId = requestAnimationFrame(() => {
+    masonryRafId = null;
+    const cols = masonryCols();
+    const gridW = grid.offsetWidth;
+    const colW = (gridW - MASONRY_GAP * (cols - 1)) / cols;
+    const heights = new Array(cols).fill(0);
 
-  grid.querySelectorAll('.photo-item').forEach(item => {
-    if (item.offsetHeight === 0) return; // skip images not yet loaded
-    const col = heights.indexOf(Math.min(...heights));
-    item.style.width = colW + 'px';
-    item.style.left = col * (colW + MASONRY_GAP) + 'px';
-    item.style.top = heights[col] + 'px';
-    heights[col] += item.offsetHeight + MASONRY_GAP;
+    grid.querySelectorAll('.photo-item').forEach(item => {
+      if (item.offsetHeight === 0) return;
+      const col = heights.indexOf(Math.min(...heights));
+      item.style.transform = `translate3d(${col * (colW + MASONRY_GAP)}px,${heights[col]}px,0)`;
+      item.style.width = colW + 'px';
+      heights[col] += item.offsetHeight + MASONRY_GAP;
+    });
+
+    const max = Math.max(...heights);
+    if (max > 0) grid.style.height = (max - MASONRY_GAP) + 'px';
   });
-
-  const max = Math.max(...heights);
-  if (max > 0) grid.style.height = (max - MASONRY_GAP) + 'px';
 }
 
-window.addEventListener('resize', runMasonry, { passive: true });
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(runMasonry, 120);
+}, { passive: true });
 
 let activeScrollHandler = null;
 
