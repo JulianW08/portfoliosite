@@ -47,6 +47,16 @@ const PHOTOS = [
     cat: 'wildlife',
   },
   {
+    file: 'photos/Amsterdam49.jpg',
+    title: 'Egyptian goose caught on top of house boat in Amsterdam',
+    cat: 'wildlife',
+  },
+  {
+    file: 'photos/Amsterdam55.jpg',
+    title: 'Egyptian goose caught staring at me',
+    cat: 'wildlife',
+  },
+  {
     file: 'photos/MaryBeth10.jpeg',
     title: 'Trash-bag concealment shot for my AP 2D Art & Design exam',
     cat: 'studio',
@@ -166,6 +176,21 @@ const PHOTOS = [
     file: 'photos/duomo.JPG',
     title:
       'Basilica in Ravenna, Italy (my mothers hometown) captured with a Nikon',
+    cat: 'urban',
+  },
+  {
+    file: 'photos/Amsterdam72.jpg',
+    title: 'Utretch canal captured with a pigeon in the frame',
+    cat: 'urban',
+  },
+  {
+    file: 'photos/Amsterdam75.jpg',
+    title: 'Utretch Domtoren captured at peak hours; gotham city inspiration',
+    cat: 'urban',
+  },
+  {
+    file: 'photos/Amsterdam62.jpg',
+    title: 'Woman on bike captured through historic passageway',
     cat: 'urban',
   },
 ];
