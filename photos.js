@@ -57,6 +57,17 @@ const PHOTOS = [
     cat: 'wildlife',
   },
   {
+    file: 'photos/Amsterdam82.jpg',
+    title: 'Crane spotted in Amsterdam park eating something',
+    cat: 'wildlife',
+  },
+  {
+    file: 'photos/Amsterdam80.jpg',
+    title:
+      'Golden goose chick spotted in Amsterdam park; was very unbothered by my presence and its curiosity was evident',
+    cat: 'wildlife',
+  },
+  {
     file: 'photos/MaryBeth10.jpeg',
     title: 'Trash-bag concealment shot for my AP 2D Art & Design exam',
     cat: 'studio',
