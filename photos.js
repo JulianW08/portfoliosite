@@ -68,6 +68,16 @@ const PHOTOS = [
     cat: 'wildlife',
   },
   {
+    file: 'photos/6-15-26_51.jpg',
+    title: 'Cool crow looking-thing spotted in Zaandes, Netherlands',
+    cat: 'wildlife',
+  },
+  {
+    file: 'photos/6-15-26_37.jpg',
+    title: 'Beautiful goat',
+    cat: 'wildlife',
+  },
+  {
     file: 'photos/MaryBeth10.jpeg',
     title: 'Trash-bag concealment shot for my AP 2D Art & Design exam',
     cat: 'studio',
