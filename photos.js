@@ -121,6 +121,11 @@ const PHOTOS = [
     cat: 'documentary',
   },
   {
+    file: 'photos/Sanbeautifullighting.jpeg',
+    title: 'San member illuminated in beautiful sunset lighting',
+    cat: 'documentary',
+  },
+  {
     file: 'photos/slums.jpg',
     title: 'Slums of Swakopmund, Namibia; Summer 2025',
     cat: 'documentary',
