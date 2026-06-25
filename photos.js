@@ -41,12 +41,6 @@ const PHOTOS = [
     cat: 'wildlife',
   },
   {
-    file: 'photos/Amsterdam46.jpg',
-    title:
-      'Heron spotted by my mom outside of our Airbnb. Selective coloring done using Lightroom',
-    cat: 'wildlife',
-  },
-  {
     file: 'photos/Amsterdam49.jpg',
     title: 'Egyptian goose caught on top of house boat in Amsterdam',
     cat: 'wildlife',
@@ -68,7 +62,7 @@ const PHOTOS = [
     cat: 'wildlife',
   },
   {
-    file: 'photos/6-15-26_51.jpg',
+    file: 'photos/coolbird1.jpg',
     title: 'Cool crow looking-thing spotted in Zaandes, Netherlands',
     cat: 'wildlife',
   },
@@ -215,8 +209,25 @@ const PHOTOS = [
     cat: 'urban',
   },
   {
+    file: 'photos/berlin3.jpg',
+    title: 'Statue captured in Berlin from low angle',
+    cat: 'urban',
+  },
+  {
     file: 'photos/Amsterdam62.jpg',
     title: 'Woman on bike captured through historic passageway',
     cat: 'urban',
+  },
+  {
+    file: 'photos/spraypaint1.jpg',
+    title:
+      'Was lucky to capture someone during a mural on an abandoned building in Amsterdam',
+    cat: 'documentary',
+  },
+  {
+    file: 'photos/spraypaint2.jpg',
+    title:
+      'Was lucky to capture someone during a mural on an abandoned building in Amsterdam',
+    cat: 'documentary',
   },
 ];
