@@ -218,16 +218,4 @@ const PHOTOS = [
     title: 'Woman on bike captured through historic passageway',
     cat: 'urban',
   },
-  {
-    file: 'photos/spraypaint1.jpg',
-    title:
-      'Was lucky to capture someone during a mural on an abandoned building in Amsterdam',
-    cat: 'documentary',
-  },
-  {
-    file: 'photos/spraypaint2.jpg',
-    title:
-      'Was lucky to capture someone during a mural on an abandoned building in Amsterdam',
-    cat: 'documentary',
-  },
 ];
