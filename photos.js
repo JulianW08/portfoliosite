@@ -218,4 +218,19 @@ const PHOTOS = [
     title: 'Woman on bike captured through historic passageway',
     cat: 'urban',
   },
+  {
+    file: 'photos/spray_paint_1.jpg',
+    title: 'First time mural shoot, hopefully of many | Amsterdam 26',
+    cat: 'urban',
+  },
+  {
+    file: 'photos/spraypaint2.jpg',
+    title: 'First time mural shoot, hopefully of many | Amsterdam 26',
+    cat: 'urban',
+  },
+  {
+    file: 'photos/spray_paint_2.jpg',
+    title: 'First time mural shoot, hopefully of many | Amsterdam 26',
+    cat: 'urban',
+  },
 ];
