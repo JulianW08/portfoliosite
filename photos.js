@@ -219,6 +219,21 @@ const PHOTOS = [
     cat: 'urban',
   },
   {
+    file: 'photos/photo8.jpg',
+    title: 'Man captured on bike while driving through beautiful Berlin street',
+    cat: 'urban',
+  },
+  {
+    file: 'photos/photo7.jpg',
+    title: 'Bradenberg gate in Berlin',
+    cat: 'urban',
+  },
+  {
+    file: 'photos/photo4.jpg',
+    title: 'Mom photographed walking through Holocaust memorial in Berlin',
+    cat: 'urban',
+  },
+  {
     file: 'photos/spray_paint_1.jpg',
     title: 'First time mural shoot, hopefully of many | Amsterdam 26',
     cat: 'urban',
