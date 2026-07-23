@@ -1,16 +1,3 @@
-/**
- * YOUR PHOTOS
- * -----------
- * 1. Drop your image files into the photos/ folder.
- * 2. Add an entry below — just the filename, a title, and a category.
- *
- * Categories: "urban" | "portrait" | "nature" | "abstract"
- * (Add new ones freely — a filter tab appears automatically.)
- *
- * Example:
- *   { file: "photos/downtown.jpg", title: "Downtown Dusk", cat: "urban" },
- */
-
 const PHOTOS = [
   {
     file: 'photos/Cabin.PNG',
@@ -158,6 +145,26 @@ const PHOTOS = [
     file: 'photos/thirdinterview1.jpeg',
     title:
       'Namibian student being interviewed about his experience with YTCs tech program in Namibia',
+    cat: 'documentary',
+  },
+  {
+    file: 'photos/94.jpg',
+    title: 'First birthday paid photography shoot | July 2026',
+    cat: 'documentary',
+  },
+  {
+    file: 'photos/43.jpg',
+    title: 'First birthday paid photography shoot | July 2026',
+    cat: 'documentary',
+  },
+  {
+    file: 'photos/89.jpg',
+    title: 'First birthday paid photography shoot | July 2026',
+    cat: 'documentary',
+  },
+  {
+    file: 'photos/63.jpg',
+    title: 'First birthday paid photography shoot | July 2026',
     cat: 'documentary',
   },
   {
