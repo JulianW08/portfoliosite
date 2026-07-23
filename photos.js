@@ -180,6 +180,16 @@ const PHOTOS = [
     title: 'First skateboarding shoot (hopefully of many)',
     cat: 'sport/dance',
   },
+  {
+    file: 'photos/Control.jpg',
+    title: 'First soccer photography shoot | Summer 2025',
+    cat: 'sport/dance',
+  },
+  {
+    file: 'photos/goalkeeping3.jpg',
+    title: 'First soccer photography shoot | Summer 2025',
+    cat: 'sport/dance',
+  },
   { file: 'photos/Amsterdam25.jpg', title: 'Amsterdam', cat: 'urban' },
   { file: 'photos/Amsterdam28.jpg', title: 'Amsterdam', cat: 'urban' },
   {
