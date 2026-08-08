@@ -168,6 +168,16 @@ const PHOTOS = [
     cat: 'documentary',
   },
   {
+    file: 'photos/58.jpg',
+    title: 'Artsie Fleetwood Jourdain Mural Envieling | August 2026',
+    cat: 'documentary',
+  },
+  {
+    file: 'photos/100.jpg',
+    title: 'Artsie Fleetwood Jourdain Mural Envieling | August 2026',
+    cat: 'documentary',
+  },
+  {
     file: 'photos/CapoeiraForSite.jpeg',
     title: 'Capoeira event',
     cat: 'sport/dance',
