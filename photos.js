@@ -16,25 +16,8 @@ const PHOTOS = [
     cat: 'wildlife',
   },
   {
-    file: 'photos/Amsterdam4.jpg',
-    title:
-      'Dog spotted resting on an Amsterdam apartments balcony, engulfed by the guard rail',
-    cat: 'wildlife',
-  },
-  {
-    file: 'photos/Amsterdam34.jpg',
-    title:
-      'Cat found resting in Amsterdam, bathing in the rising sun, and was genuinely unbothered by my persistence to capture its beauty',
-    cat: 'wildlife',
-  },
-  {
     file: 'photos/Amsterdam49.jpg',
     title: 'Egyptian goose caught on top of house boat in Amsterdam',
-    cat: 'wildlife',
-  },
-  {
-    file: 'photos/Amsterdam55.jpg',
-    title: 'Egyptian goose caught staring at me',
     cat: 'wildlife',
   },
   {
@@ -215,11 +198,6 @@ const PHOTOS = [
     cat: 'urban',
   },
   {
-    file: 'photos/Amsterdam43.jpg',
-    title: 'Amstel hotel captured from wormhole perspective',
-    cat: 'urban',
-  },
-  {
     file: 'photos/duomo.JPG',
     title:
       'Basilica in Ravenna, Italy (my mothers hometown) captured with a Nikon',
@@ -228,11 +206,6 @@ const PHOTOS = [
   {
     file: 'photos/Amsterdam72.jpg',
     title: 'Utretch canal captured with a pigeon in the frame',
-    cat: 'urban',
-  },
-  {
-    file: 'photos/Amsterdam75.jpg',
-    title: 'Utretch Domtoren captured at peak hours; gotham city inspiration',
     cat: 'urban',
   },
   {
@@ -253,11 +226,6 @@ const PHOTOS = [
   {
     file: 'photos/photo7.jpg',
     title: 'Bradenberg gate in Berlin',
-    cat: 'urban',
-  },
-  {
-    file: 'photos/photo4.jpg',
-    title: 'Mom photographed walking through Holocaust memorial in Berlin',
     cat: 'urban',
   },
   {
